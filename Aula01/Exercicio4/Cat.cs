@@ -25,7 +25,7 @@ namespace Exercicio4
         // ////////////////////////////////////////////////////////// //
 
         // Nome
-        private string name;
+        private readonly string name;
 
         // Energia, entre 0 e maxEnergy
         private int energy;

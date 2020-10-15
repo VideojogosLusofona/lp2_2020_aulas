@@ -9,7 +9,7 @@ namespace Exercicio3
         // ////////////////////////////////////////////////////////// //
 
         // Nome
-        private string name;
+        private readonly string name;
 
         // Energia, entre 0 e 100
         private int energy;
