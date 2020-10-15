@@ -130,7 +130,7 @@ namespace Exercicio4
         public Mood GetMood() => moodStatus;
 
         // /////////////////////////////////////////////////////////////////////// //
-        // Ações do gato, definidas pelos seus métodos (além de getters e setters) //
+        // Ações do gato, definidas pelos seus métodos (que não getters e setters) //
         // /////////////////////////////////////////////////////////////////////// //
 
         // Comer
@@ -186,6 +186,5 @@ namespace Exercicio4
             energy -= energyLossAfterMeow;
             if (energy < 0) energy = 0;
         }
-
     }
 }
