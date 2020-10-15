@@ -161,8 +161,9 @@ namespace Exercicio4
         public void Meow()
         {
             // Gato mia na consola. E se quiséssemos reutilizar esta classe no
-            // Unity, como faríamos?
-            Console.WriteLine("Meow!");
+            // Unity, como faríamos? Fará sentido meter um WriteLine() numa
+            // ação do gato?
+            Console.WriteLine($"{name} says \"Meow\"!");
 
             // Gato perde energia ao miar, mas não pode ficar menor que zero
             energy -= energyLossAfterMeow;
