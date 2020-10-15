@@ -36,13 +36,47 @@ namespace Exercicio4
         // Disposição do gato
         private Mood moodStatus;
 
+        // Gerador de números aleatórios
+        private Random random;
+
+        // Possíveis valores para a enumeração Feed
+        private Feed[] possibleFeedStatus;
+
+        // Possíveis valores para a enumeração Mood
+        private Mood[] possibleMoods;
+
         // //////////////////// //
         // Construtores do gato //
         // //////////////////// //
 
+        // Construtor privado que inicializa o estado comum aos outros dois
+        // construtores públicos, evitando repetição de código
+        // Só pode ser chamado pelos outros dois construtores e não diretamente,
+        // uma vez que é privado
+        private Cat()
+        {
+            // Instanciar e guardar um gerador de números aleatórios
+            random = new Random();
+
+            // Obter possíveis valores da enumeração Feed
+            // - Enum é a classe base para todas as enums no C# e contém alguns
+            //   métodos úteis, como é o caso do método GetValues()
+            // - O método GetValues() devolve um array contendo os valores
+            //   possíveis da enum indicado no parâmetro
+            // - É preciso fazer cast do array devolvido para o tipo que
+            //   queremos, neste caso Feed[]
+            possibleFeedStatus = (Feed[])Enum.GetValues(typeof(Feed));
+
+            // Obter possíveis valores para a enumeração Mood usando a mesma
+            // lógica
+            possibleMoods = (Mood[])Enum.GetValues(typeof(Mood));
+        }
+
         // Construtor que aceita todo o estado do gato através dos seus
-        // parâmetros
+        // parâmetros. Chama o construtor privado para este inicializar o
+        // estado comum do gato (e.g. gerador de números aleatórios).
         public Cat(string name, int energy, Feed feedStatus, Mood moodStatus)
+            : this()
         {
             // Guardar nome do gato
             this.name = name;
@@ -60,27 +94,15 @@ namespace Exercicio4
         }
 
         // Construtor que apenas aceita o nome do gato, definindo aleatoriamente
-        // o restante estado
-        public Cat(string name)
+        // o restante estado. Chama o construtor privado para este inicializar o
+        // estado comum do gato (e.g. gerador de números aleatórios).
+        public Cat(string name) : this()
         {
-            // Declarar e instanciar um gerador de números aleatórios
-            Random random = new Random();
-
-            // Obter possíveis valores da enumeração Feed
-            // - Enum é a classe base para todas as enums no C# e contém alguns
-            //   métodos úteis, como é o caso do método GetValues()
-            // - O método GetValues() devolve um array contendo os valores
-            //   possíveis da enum indicado no parâmetro
-            // - É preciso fazer cast do array devolvido para o tipo que
-            //   queremos, neste caso Feed[]
-            Feed[] possibleFeedStatus = (Feed[])Enum.GetValues(typeof(Feed));
-
-            // Obter possíveis valores para a enumeração Mood usando a mesma
-            // lógica
-            Mood[] possibleMoodStatus = (Mood[])Enum.GetValues(typeof(Mood));
-
             // Guardar o nome do gato
             this.name = name;
+
+            // Obter valor aleatório para a energia entre 0 e 100 e guardá-lo
+            energy = random.Next(maxEnergy + 1);
 
             // Obter valor aleatório para o estado de alimentação e guardá-lo
             feedStatus =
@@ -88,10 +110,7 @@ namespace Exercicio4
 
             // Obter valor aleatório para o Mood e guardá-lo
             moodStatus =
-                possibleMoodStatus[random.Next(possibleMoodStatus.Length)];
-
-            // Obter valor aleatório para a energia entre 0 e 100 e guardá-lo
-            energy = random.Next(maxEnergy + 1);
+                possibleMoods[random.Next(possibleMoods.Length)];
         }
 
         // /////////////////////////////////////////////////////////////// //
@@ -129,7 +148,7 @@ namespace Exercicio4
         public void Sleep()
         {
             // Aumentar a energia do gato ao dormir, garantindo que a mesma não
-            // passa dos 100
+            // passa da energia máxima
             energy += energyGainAfterSleep;
             if (energy > maxEnergy) energy = maxEnergy;
 
@@ -140,10 +159,8 @@ namespace Exercicio4
                 feedStatus--;
             }
 
-            // A disposição do gato ao acordar é rabugento
-            // Seria mais interessante ser aleatória, veremos no próximo
-            // exercício
-            moodStatus = Mood.Grumpy;
+            // A disposição do gato ao acordar é aleatória
+            moodStatus = possibleMoods[random.Next(possibleMoods.Length)];
         }
 
         // Brincar
