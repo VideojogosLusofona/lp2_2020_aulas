@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatFromLastClass", "CatFrom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polimorfismo", "Polimorfismo\Polimorfismo.csproj", "{18930FFA-704A-4748-90E7-72111DC6AC2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameUnits", "GameUnits\GameUnits.csproj", "{6AD6E91A-71BF-4853-AE46-9AC414823216}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{18930FFA-704A-4748-90E7-72111DC6AC2D}.Release|x64.Build.0 = Release|Any CPU
 		{18930FFA-704A-4748-90E7-72111DC6AC2D}.Release|x86.ActiveCfg = Release|Any CPU
 		{18930FFA-704A-4748-90E7-72111DC6AC2D}.Release|x86.Build.0 = Release|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Debug|x64.Build.0 = Debug|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Debug|x86.Build.0 = Debug|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Release|x64.ActiveCfg = Release|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Release|x64.Build.0 = Release|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Release|x86.ActiveCfg = Release|Any CPU
+		{6AD6E91A-71BF-4853-AE46-9AC414823216}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
