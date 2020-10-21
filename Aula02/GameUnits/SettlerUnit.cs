@@ -4,9 +4,14 @@ namespace GameUnits
     {
         public override float Value => 5;
 
-        public SettlerUnit(int movement, int health)
+        public SettlerUnit(
+            int movement, int health)
             : base(movement, health)
+        { }
+
+        public void Settle()
         {
+            // Criar aldeia/cidade
         }
     }
 }

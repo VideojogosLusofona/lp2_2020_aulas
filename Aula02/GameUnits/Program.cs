@@ -6,21 +6,14 @@ namespace GameUnits
     {
         static void Main(string[] args)
         {
-            Unit[] units = new Unit[2];
+            Unit mu = new MilitaryUnit(2, 100, 50);
+            Unit su = new SettlerUnit(5, 25);
 
-            units[0] = new MilitaryUnit(3, 10, 100);
-            units[1] = new SettlerUnit(1, 2);
+            mu.Move(new Vector2(2, -7));
+            su.Move(new Vector2(-1, 4));
 
-            foreach (Unit u in units)
-            {
-                Console.WriteLine(u);
-                u.Move();
-                Console.WriteLine($"Health = {u.Health}");
-                Console.WriteLine($"Value  = {u.Value}");
-                Console.WriteLine("---------");
-            }
-
-            Console.WriteLine("Thank you for using this program!");
+            Console.WriteLine(mu);
+            Console.WriteLine(su);
         }
     }
 }
