@@ -15,7 +15,7 @@ namespace CityManager3
         /// Program starts here.
         /// </summary>
         /// <param name="args">Not used.</param>
-        public static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Create a program and run it
             Program program = new Program();
