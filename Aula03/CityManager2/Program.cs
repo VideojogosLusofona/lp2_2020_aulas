@@ -9,7 +9,7 @@ namespace CityManager2
     public class Program
     {
         // List of buildings
-        private IList<Building> buildings;
+        private List<Building> buildings;
 
         /// <summary>
         /// Program starts here.

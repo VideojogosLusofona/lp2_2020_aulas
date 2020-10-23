@@ -9,7 +9,7 @@ namespace CityManager1
     public class Program
     {
         // List of buildings
-        private IList<Building> buildings;
+        private List<Building> buildings;
 
         /// <summary>
         /// Program starts here.
@@ -202,7 +202,7 @@ namespace CityManager1
         {
             // Create a new building list, only for buildings with value greater
             // than minValue
-            IList<Building> buildingsWithValueGreaterThanX = new List<Building>();
+            List<Building> buildingsWithValueGreaterThanX = new List<Building>();
 
             // Cycle through all buildings
             foreach (Building building in buildings)
