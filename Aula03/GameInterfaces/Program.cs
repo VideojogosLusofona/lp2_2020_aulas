@@ -4,7 +4,7 @@ namespace GameInterfaces
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             IHasValue[] stuffWithValue = new IHasValue[10];
             IHasValue previous = null;
