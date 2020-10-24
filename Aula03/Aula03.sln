@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashBuildings", "HashBuildi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGenericMethod", "MyGenericMethod\MyGenericMethod.csproj", "{790CF2A8-54A9-4C54-A67E-161476CA2313}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podium", "Podium\Podium.csproj", "{36FCE9A3-BD03-4D57-81BB-F7786A115479}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,5 +130,17 @@ Global
 		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Release|x64.Build.0 = Release|Any CPU
 		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Release|x86.ActiveCfg = Release|Any CPU
 		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Release|x86.Build.0 = Release|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Debug|x64.Build.0 = Debug|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Debug|x86.Build.0 = Debug|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Release|x64.ActiveCfg = Release|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Release|x64.Build.0 = Release|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Release|x86.ActiveCfg = Release|Any CPU
+		{36FCE9A3-BD03-4D57-81BB-F7786A115479}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
