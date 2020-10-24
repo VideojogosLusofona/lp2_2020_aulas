@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingCollections", "Buil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashBuildings", "HashBuildings\HashBuildings.csproj", "{1B2A7397-F681-4021-99E6-31D46CD8D5EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGenericMethod", "MyGenericMethod\MyGenericMethod.csproj", "{790CF2A8-54A9-4C54-A67E-161476CA2313}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,5 +116,17 @@ Global
 		{1B2A7397-F681-4021-99E6-31D46CD8D5EF}.Release|x64.Build.0 = Release|Any CPU
 		{1B2A7397-F681-4021-99E6-31D46CD8D5EF}.Release|x86.ActiveCfg = Release|Any CPU
 		{1B2A7397-F681-4021-99E6-31D46CD8D5EF}.Release|x86.Build.0 = Release|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Debug|x64.Build.0 = Debug|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Debug|x86.Build.0 = Debug|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Release|Any CPU.Build.0 = Release|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Release|x64.ActiveCfg = Release|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Release|x64.Build.0 = Release|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Release|x86.ActiveCfg = Release|Any CPU
+		{790CF2A8-54A9-4C54-A67E-161476CA2313}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
