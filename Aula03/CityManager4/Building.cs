@@ -54,8 +54,8 @@ namespace CityManager4
         {
             // Nulls always come first in sorting
             if (other == null) return 1;
-            if (Value < other.Value) return -1;
-            if (Value > other.Value) return 1;
+            if (Value < other.Value) return 1;
+            if (Value > other.Value) return -1;
             return 0;
         }
     }
