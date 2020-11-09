@@ -14,7 +14,7 @@ namespace Exercicio6
         {
             if (suppressionPercent < 0 || suppressionPercent > 1)
             {
-                throw new InvalidOperationException(
+                throw new ArgumentOutOfRangeException(
                     "Invalid suppression!!!!"
                 );
             }

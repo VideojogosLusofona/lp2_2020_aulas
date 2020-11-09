@@ -27,9 +27,9 @@ namespace Exercicio6
             {
                 new GunSilencer(mGun, 1.2f);
             }
-            catch (InvalidOperationException ioe)
+            catch (ArgumentOutOfRangeException e)
             {
-                Console.WriteLine(ioe.Message);
+                Console.WriteLine(e.Message);
             }
             finally
             {
