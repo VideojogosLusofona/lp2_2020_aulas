@@ -7,7 +7,7 @@ using System.Net;
 namespace Exercicio5
 {
     /// <summary>
-    /// Resolução do exercício 5 da aula. 
+    /// Resolução do exercício 5 da aula.
     /// </summary>
     class Program
     {
@@ -50,28 +50,30 @@ namespace Exercicio5
 
             // Indicar quantas linhas têm comprimento maior que 30 caracteres
             numLinesGt30 =
-                (from line in lines select line.Length > 30).Count();
+                (from line in lines
+                where line.Length > 30
+                select line ).Count();
             Console.WriteLine($"Linhas > 30     : {numLinesGt30}");
 
             // Indicar a média do nº de caracteres das linhas lidas
             avgCharsInLines =
-                (from line in lines select line.Length).Average();
+                (from line in lines
+                select line.Length).Average();
             Console.WriteLine($"Média nº chars  : {avgCharsInLines:f}");
 
             // Indicar se existe alguma linha com mais de 120 caraceteres
             anyWithMoreThan120Chars =
-                (from line in lines select line.Length > 120).Any();
+                (from line in lines
+                where line.Length > 120
+                select line).Any();
             Console.WriteLine($"Algum com +120? : {anyWithMoreThan120Chars}");
 
             // Obter primeira palavra em maiúsculas das linhas que
             // contêm o carácter 'Y'
             firstWordOfLineWithCharY =
-                from word in
-                    (from line in lines
-                     where line.Contains("Y")
-                     select line.Split()[0].ToUpper())
-                where word.Length > 0
-                select word;
+                from line in lines
+                where line.Contains("Y")
+                select line.Trim().Split()[0].ToUpper();
 
             // Mostrar primeira palavra em maiúsculas das linhas que
             // contêm o carácter 'Y'
@@ -79,7 +81,7 @@ namespace Exercicio5
                 "Primeira palavra em maiúsculas de linhas com 'Y'");
             foreach (string s in firstWordOfLineWithCharY)
             {
-                Console.WriteLine($"\t{s}");
+                Console.WriteLine($"=> {s}");
             }
         }
     }

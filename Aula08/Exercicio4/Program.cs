@@ -7,7 +7,7 @@ using System.Net;
 namespace Exercicio4
 {
     /// <summary>
-    /// Resolução do exercício 4 da aula. 
+    /// Resolução do exercício 4 da aula.
     /// </summary>
     class Program
     {
@@ -64,8 +64,7 @@ namespace Exercicio4
             // contêm o carácter 'Y'
             firstWordOfLineWithCharY = lines
                 .Where(s => s.Contains("Y"))
-                .Select(s => s.Split()[0].ToUpper())
-                .Where(s => s.Length > 0);
+                .Select(s => s.Trim().Split()[0].ToUpper());
 
             // Mostrar primeira palavra em maiúsculas das linhas que
             // contêm o carácter 'Y'
@@ -73,7 +72,7 @@ namespace Exercicio4
                 "Primeira palavra em maiúsculas de linhas com 'Y'");
             foreach (string s in firstWordOfLineWithCharY)
             {
-                Console.WriteLine($"\t{s}");
+                Console.WriteLine($"=> {s}");
             }
         }
     }
