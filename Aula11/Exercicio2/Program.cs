@@ -6,30 +6,28 @@ namespace Exercicio2
 {
     class Program
     {
-        private enum Dir { Up, Down, Left, Right, None }
+        private enum Dir { Up, Down, Left, Right, None };
+
+        private const int XMAX = 10;
+        private const int YMAX = 10;
+
+        private bool running;
         private BlockingCollection<ConsoleKey> input;
+        private Dir dir;
         private Thread inputThread;
         private int x, y, xOld, yOld;
-        private readonly int maxX, maxY;
-        private Dir dir;
-        private bool running;
 
         private static void Main(string[] args)
         {
             Program p = new Program();
             p.GameLoop();
+            p.Finish();
         }
 
-        private Program()
+        public Program()
         {
             input = new BlockingCollection<ConsoleKey>();
             inputThread = new Thread(ReadKeys);
-            maxX = 10;
-            maxY = 10;
-            x = 5;
-            y = 5;
-            dir = Dir.None;
-            inputThread.Start();
             Console.CursorVisible = false;
         }
 
@@ -38,20 +36,17 @@ namespace Exercicio2
             int msPerFrame = 20;
             Console.Clear();
             running = true;
+            inputThread.Start();
+
             while (running)
             {
                 int start = DateTime.Now.Millisecond;
                 ProcessInput();
                 Update();
                 Render();
-                Thread.Sleep(start + msPerFrame - DateTime.Now.Millisecond);
+                Thread.Sleep(
+                    start + msPerFrame - DateTime.Now.Millisecond);
             }
-        }
-
-        private void Finish()
-        {
-            Console.CursorVisible = true;
-            inputThread.Join();
         }
 
         private void ProcessInput()
@@ -79,26 +74,26 @@ namespace Exercicio2
                 }
             }
         }
-
         private void Update()
         {
             if (dir != Dir.None)
             {
                 xOld = x;
                 yOld = y;
+
                 switch (dir)
                 {
                     case Dir.Up:
                         y = Math.Max(0, y - 1);
                         break;
                     case Dir.Down:
-                        y = Math.Min(maxY, y + 1);
+                        y = Math.Min(YMAX, y + 1);
                         break;
                     case Dir.Left:
                         x = Math.Max(0, x - 1);
                         break;
                     case Dir.Right:
-                        x = Math.Min(maxX, x + 1);
+                        x = Math.Min(XMAX, x + 1);
                         break;
                 }
                 dir = Dir.None;
@@ -113,6 +108,12 @@ namespace Exercicio2
             Console.Write("X");
         }
 
+        private void Finish()
+        {
+            inputThread.Join();
+            Console.CursorVisible = true;
+        }
+
         private void ReadKeys()
         {
             ConsoleKey ck;
@@ -122,5 +123,6 @@ namespace Exercicio2
                 input.Add(ck);
             } while (ck != ConsoleKey.Escape);
         }
+
     }
 }
