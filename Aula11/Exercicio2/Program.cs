@@ -40,14 +40,11 @@ namespace Exercicio2
             running = true;
             while (running)
             {
-                long start = DateTime.Now.Ticks;
+                int start = DateTime.Now.Millisecond;
                 ProcessInput();
                 Update();
                 Render();
-                Thread.Sleep(
-                    (int)(start / TimeSpan.TicksPerMillisecond
-                    + msPerFrame
-                    - DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond));
+                Thread.Sleep(start + msPerFrame - DateTime.Now.Millisecond);
             }
         }
 
