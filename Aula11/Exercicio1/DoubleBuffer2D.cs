@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace Exercicio1
 {
     public class DoubleBuffer2D<T>
     {
-        private T[,] current;
-        private T[,] next;
+        private T[,] current, next;
 
-        public int XDim => next.GetLength(0);
-        public int YDim => next.GetLength(1);
+        public int XDim => current.GetLength(0);
+        public int YDim => current.GetLength(1);
 
         public T this[int x, int y]
         {
@@ -18,16 +15,15 @@ namespace Exercicio1
             set => next[x, y] = value;
         }
 
-        private void Clear()
+        public void Clear()
         {
-            Array.Clear(next, 0, XDim * YDim - 1);
+            Array.Clear(next, 0, XDim * YDim);
         }
 
         public DoubleBuffer2D(int x, int y)
         {
             current = new T[x, y];
             next = new T[x, y];
-            Clear();
         }
 
         public void Swap()
