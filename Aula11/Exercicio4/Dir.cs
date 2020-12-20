@@ -1,5 +1,6 @@
-namespace Exercicio3
+namespace Exercicio4
 {
+    // The directions where the player can move
     public enum Dir
     {
         Up,
@@ -7,5 +8,5 @@ namespace Exercicio3
         Left,
         Right,
         None
-    };
+    }
 }

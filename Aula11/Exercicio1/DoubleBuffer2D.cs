@@ -31,6 +31,7 @@ namespace Exercicio1
             T[,] aux = current;
             current = next;
             next = aux;
+            Clear();
         }
     }
 }

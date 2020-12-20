@@ -1,4 +1,4 @@
-namespace Exercicio3
+namespace Exercicio4
 {
     // Background component, for rendering a simple background
     public class BackgroundComponent : Component

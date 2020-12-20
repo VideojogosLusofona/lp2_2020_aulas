@@ -1,6 +1,6 @@
 using System;
 
-namespace Exercicio3
+namespace Exercicio4
 {
     // This component is used to move the player
     public class MoveComponent : Component

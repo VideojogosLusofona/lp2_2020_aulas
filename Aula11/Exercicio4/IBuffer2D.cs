@@ -1,4 +1,4 @@
-namespace Exercicio3
+namespace Exercicio4
 {
     // Interface for a generic 2D buffer
     public interface IBuffer2D<T>

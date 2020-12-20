@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using System.Collections.Concurrent;
 
-namespace Exercicio3
+namespace Exercicio4
 {
     // A key reader components
     // Note that this implementation is very limited, since only one game

@@ -1,4 +1,4 @@
-namespace Exercicio3
+namespace Exercicio4
 {
     // Interface for all game objects and components
     public interface IGameObject

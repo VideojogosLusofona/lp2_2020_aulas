@@ -1,4 +1,4 @@
-namespace Exercicio3
+namespace Exercicio4
 {
     // The base class for all components
     public abstract class Component : IGameObject

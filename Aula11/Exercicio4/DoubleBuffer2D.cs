@@ -1,13 +1,17 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Exercicio3
+namespace Exercicio4
 {
-    public class DoubleBuffer2D<T>
+    // A simple generic double buffer implementation
+    public class DoubleBuffer2D<T> : IBuffer2D<T>
     {
-        private T[,] current, next;
+        private T[,] current;
+        private T[,] next;
 
-        public int XDim => current.GetLength(0);
-        public int YDim => current.GetLength(1);
+        public int XDim => next.GetLength(0);
+        public int YDim => next.GetLength(1);
 
         public T this[int x, int y]
         {
@@ -15,7 +19,7 @@ namespace Exercicio3
             set => next[x, y] = value;
         }
 
-        public void Clear()
+        private void Clear()
         {
             Array.Clear(next, 0, XDim * YDim);
         }
@@ -24,6 +28,7 @@ namespace Exercicio3
         {
             current = new T[x, y];
             next = new T[x, y];
+            Clear();
         }
 
         public void Swap()
