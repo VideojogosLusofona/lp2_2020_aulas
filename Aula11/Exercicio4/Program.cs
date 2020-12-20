@@ -17,7 +17,7 @@ namespace Exercicio4
         // Is the game running?
         private bool running = false;
         // Current frame
-        int frame = 0;
+        private int frame = 0;
 
         // Program starts here
         private static void Main(string[] args)

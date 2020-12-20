@@ -27,7 +27,7 @@ namespace Exercicio4
             // Add component to this game object
             components.Add(component);
             // Set this game object as the container of the component
-            component.gameObject = this;
+            component.ParentGameObject = this;
         }
 
         // Get the first component of the specified type

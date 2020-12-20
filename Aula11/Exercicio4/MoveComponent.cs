@@ -29,7 +29,7 @@ namespace Exercicio4
         public override void Start()
         {
             // Get a reference to the key reader component
-            keyReader = gameObject.GetComponent<KeyReaderComponent>();
+            keyReader = ParentGameObject.GetComponent<KeyReaderComponent>();
         }
 
         // Update is called once per frame
