@@ -9,7 +9,7 @@ namespace Exercicio4
         // Game world dimensions
         private const int worldDimX = 10, worldDimY = 10;
         // List of game objects
-        private IList<IGameObject> gameObjects;
+        private ICollection<IGameObject> gameObjects;
         // Double buffer used for rendering
         private DoubleBuffer2D<char> buffer2D;
         // Target milliseconds per frame
@@ -24,6 +24,8 @@ namespace Exercicio4
         {
             // Create a new program
             Program p = new Program();
+            // Setup the scene
+            p.SetupScene();
             // Star the game loop on the new program instance
             p.GameLoop();
         }
@@ -31,17 +33,20 @@ namespace Exercicio4
         // Program constructor
         private Program()
         {
-            // Game objects which will exist in our game
-            GameObject background, player;
-
-            // Components
-            KeyReaderComponent krc;
-
             // Create a double buffer for rendering
             buffer2D = new DoubleBuffer2D<char>(worldDimX, worldDimY);
 
             // Instantiate the list of game objects
             gameObjects = new List<IGameObject>();
+        }
+
+        private void SetupScene()
+        {
+            // Game objects which will exist in our game
+            GameObject background, player;
+
+            // Components
+            KeyReaderComponent krc;
 
             // Create the background game object and add it a Background
             // component
